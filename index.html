@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>🔥📋 Todo app</title>
+</head>
+<body>
+    <h2>🔥 Todo App</h2>
+    <h4>with 
+        <a href="https://lit-html.polymer-project.org/" target="_blank">
+            lit-html 
+        </a>
+        & 
+        <a href="https://lit-element.polymer-project.org" target="_blank">
+            lit-element
+        </a>
+    </h4>
+    <div id="support"></div>
+    <todo-app></todo-app>
+</body>
+<script type="module" src="/modules/todo-app.js"></script>
+<script type="module" src="/modules/todo-item.js"></script>
+<script>
+    if (!document.querySelector('todo-app')) {
+        var supportNode = document.getElementById('support');
+        supportNode.innerHTML = 'Your browser cannot run this app. Please use update it, or use FF or chrome.'
+    }
+</script>
+</html>
